@@ -1,0 +1,99 @@
+Request Talent: 
+
+Request new talent
+POST /v1/request/talent/
+"data" : [
+	{
+		"request_type":"string",
+		"department" :"string",
+		"division" : "string",
+		"position" :"string",
+		"jumlah" : 0, 
+		"job_responsibility" :"string",
+		"job_requirement" : "string",
+		"approval": [{
+			"email":"string"
+		}]
+	}
+]
+
+GET Request History 
+
+GET /v1/request/history
+Returns : 
+200 OK
+Content-Type:application/json
+
+[
+    {
+		"department" :"string",
+		"division" : "string",
+		"status" :"string",
+        "created_at" : "2019-06-12 10:20:37"
+    }
+]
+
+
+
+GET Request History Detail
+
+GET /v1/request/history/:request_talent_id
+Returns : 
+200 OK
+Content-Type:application/json
+
+
+[
+    {
+		"id" : 1,
+		"request_talent_id" : 2,
+		"status" :"string",
+        "approved_by": [{
+            "name": "string",
+            "email" : "string"
+        }],
+        "updated_at" :"2019-06-15 10:20:37"
+    }
+]
+
+
+
+
+
+
+
+Request Room
+
+POST /v1/request/room
+
+"data": [
+    {
+        ""
+    }]
+
+GET /v1/rooms
+
+Returns : 
+200 OK
+Content-Type:application/json
+
+[
+    {
+        "id": 2,
+        "room_name":"string",
+        "capacity":1,
+        "location":"string",
+        "isAvailable":true,
+
+
+    }
+]
+
+Reimbursement 
+
+POST /v1/request/reimbursement
+"data" : [{
+
+}]
+
+
