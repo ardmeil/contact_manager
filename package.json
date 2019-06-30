@@ -1,15 +1,22 @@
 {
-  "name": "react-native-web-app",
+  "name": "contact-manager-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ardmeil.github.io/contact_manager",
   "dependencies": {
+    "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "classnames": "^2.2.6",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "0.9.5"
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "0.9.5",
+    "uuid":"^3.3.2"
   },
   "devDependencies": {},
   "scripts": {
+    "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
